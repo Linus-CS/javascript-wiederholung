@@ -1,7 +1,7 @@
-function bildFallenLassen(beginnAbstandLinks){
+function bildFallenLassen(beginnAbstandLinks, ressourcenBild){
     let bild = document.createElement("img");
 
-    bild.src = "gold.png";
+    bild.src = ressourcenBild;
     let oben = 0;
 
     bild.style.display = "none";
@@ -27,7 +27,7 @@ function bildFallenLassen(beginnAbstandLinks){
     let id = setInterval(verschieben, 10);  
 }
 
-function bilderRegen(){
+function bilderRegen(ressourcenBild){
     let count = 0;
 
     function fallen(){
@@ -36,10 +36,31 @@ function bilderRegen(){
             clearInterval(idInterval);
         }
         let zufallsZahl = Math.random() * (window.innerWidth - 200);  
-        bildFallenLassen(zufallsZahl);
+        bildFallenLassen(zufallsZahl, ressourcenBild);
     }
 
     let idInterval = setInterval(fallen, 10);
 }
 
-document.body.onclick = bilderRegen;
+
+function saphireRegen(){
+    bilderRegen("saphire.png");
+}
+
+function goldRegen(){
+    bilderRegen("gold.png");
+}
+
+function eisenRegen(){
+    bilderRegen("eisen.png");
+}
+
+
+let goldBild = document.getElementById("gold");
+let eisenBild = document.getElementById("eisen");
+let saphireBild = document.getElementById("saphire");
+
+
+goldBild.onclick = goldRegen;
+eisenBild.onclick = eisenRegen;
+saphireBild.onclick = saphireRegen;
