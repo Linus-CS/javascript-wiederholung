@@ -1,7 +1,7 @@
 function bildFallenLassen(beginnAbstandLinks){
     let bild = document.createElement("img");
 
-    bild.src = "saphire.png";
+    bild.src = "gold.png";
     let oben = 0;
 
     bild.style.display = "none";
