@@ -1,0 +1,26 @@
+p {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.überschrift {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.unterüberschrift{
+    margin-left: 10%;
+}
+
+.rohstoff-bild{
+    width: 300px;
+}
+
+.container-rohstoffe{
+    display: flex;
+    justify-content: center;
+}
+
+.rohstoff {
+    text-align: center;
+}
